@@ -1,0 +1,13 @@
+version: "3.8"
+services:
+  fizzbuzz-api:
+    build:
+      dockerfile: API/Fizzbuzz.Api/Dockerfile
+      context: .
+    image: fizzbuzz-api
+    container_name: FizzBuzzApi${ENVIRONMENT}
+    ports:
+      - "${PORT}:80"
+    restart: always
+    environment:
+      - ASPNETCORE_ENVIRONMENT=${ENVIRONMENT}

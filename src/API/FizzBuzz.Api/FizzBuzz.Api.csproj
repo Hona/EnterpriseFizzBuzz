@@ -2,12 +2,16 @@
 
     <PropertyGroup>
         <TargetFramework>net5.0</TargetFramework>
+        <UserSecretsId>aef9562f-f13a-4797-a59a-f404db6eb2e9</UserSecretsId>
+        <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+        <DockerfileContext>..\..\..</DockerfileContext>
     </PropertyGroup>
 
     <ItemGroup>
         <PackageReference Include="MediatR" Version="9.0.0" />
         <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="5.0.1" NoWarn="NU1605" />
         <PackageReference Include="Microsoft.AspNetCore.Authentication.OpenIdConnect" Version="5.0.1" NoWarn="NU1605" />
+        <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.10.9" />
         <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
     </ItemGroup>
 

@@ -6,6 +6,8 @@ This repository aims to demonstrate the enterprise way of implementing the class
 
 The design here is DDD (Domain Driven Design), with the infrastructure layer missing, because currently the solution is stateless.
 
+AutoMapper is used to map between Core models, DTOs, and ViewModels 
+
 The layers are as follows:
 
 * Presentation Layer: an ASP.NET Core 5 Web API

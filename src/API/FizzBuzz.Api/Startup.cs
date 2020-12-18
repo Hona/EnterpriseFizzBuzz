@@ -2,6 +2,11 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AutoMapper;
+using FizzBuzz.Application;
+using FizzBuzz.Application.Queries;
+using FizzBuzz.Core.Services;
+using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -35,6 +40,11 @@ namespace FizzBuzz.Api
                     Version = "v1"
                 });
             });
+
+            services.AddMediatR(typeof(GetFizzBuzzResultsQuery).Assembly);
+            services.AddAutoMapper(typeof(ApplicationProfile), typeof(ViewModelProfile));
+
+            services.AddSingleton<IFizzBuzzService, FizzBuzzService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

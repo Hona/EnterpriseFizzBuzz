@@ -31,6 +31,12 @@ namespace FizzBuzz.Core.Services
                 resultFlags |= FizzBuzzResultFlags.Buzz;
             }
 
+            // Zero needs to return none, even though it will get FizzBuzz from above
+            if (number == 0)
+            {
+                resultFlags = FizzBuzzResultFlags.None;
+            }
+
             return new FizzBuzzResult
             {
                 Number = number,

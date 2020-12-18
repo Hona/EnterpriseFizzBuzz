@@ -2,7 +2,7 @@ version: "3.8"
 services:
   fizzbuzz-api:
     build:
-      dockerfile: API/Fizzbuzz.Api/Dockerfile
+      dockerfile: src/API/FizzBuzz.Api/Dockerfile
       context: .
     image: fizzbuzz-api
     container_name: FizzBuzzApi${ENVIRONMENT}
